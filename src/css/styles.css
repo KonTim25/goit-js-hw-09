@@ -1,18 +1,113 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+/* #region Base */
+* {
+  box-sizing: border-box;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+ul, ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+/* #endregion Base */
+
+/* #region Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery .gallery-item{
+  width: calc((100% - 48px) / 3);
+  overflow: hidden;
+  transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* #endregion Gallery */
+
+/* #region Feedback Form */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.feedback-form > label > input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+}
+
+.feedback-form > label > input:hover {
+  border: 1px solid #000;
+}
+
+.feedback-form > label > input:active {
+  border: 1px solid #808080;
+  color: #2e2f42;
+}
+
+.feedback-form > label > textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 360px;
+}
+
+.feedback-form > label > textarea:hover {
+  border: 1px solid #000;
+}
+
+.feedback-form > label > textarea:active {
+  border: 1px solid #808080;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form > button {
+  border: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  background: #4e75ff;
+  width: 86px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.feedback-form > button:hover,
+.feedback-form > button:active {
+  background: #6c8cff;
+}
+/* #endregion Feedback Form */
